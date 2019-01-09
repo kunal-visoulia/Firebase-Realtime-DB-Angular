@@ -3,6 +3,11 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import * as firebase from 'firebase';
 
+class Course {
+  $key: string;
+  $value: string;
+
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,25 +15,17 @@ import * as firebase from 'firebase';
 })
 export class AppComponent {
   title = 'firebase-CRUD';
-  courses: any[];
-  i = 4;
+
+  // courses: Observable<any[]>;
+  course: any;
   constructor(db: AngularFireDatabase) {
-    db.list('/Courses').valueChanges().subscribe(courses => {
-      this.courses = courses;
-      console.log(this.courses);
+    db.list('/Courses').valueChanges().subscribe(course => {
+      this.course = course;
+      console.log(this.course);
+
     });
-
-    // courses: Observable<any[]>;
-    // course: any;
-    // constructor(db: AngularFireDatabase) {
-    //   this.courses = db.list('Courses').valueChanges();
-    //   this.courses.subscribe(course => {
-    //     this.course = course;
-    //     console.log(this.course);
-
-    //   });
-    //   // console.log(this.courses);
+    // console.log(this.courses);
     // }
 
-      }
+  }
 }
