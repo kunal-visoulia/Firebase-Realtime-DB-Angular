@@ -16,7 +16,8 @@ import * as admin from 'firebase-admin';
 })
 export class AppComponent {
   title = 'firebase-Realtime-DB';
-  i = 3;
+  i = 5;
+  db2: any;
   // courses: Observable<any[]>;
   course: any;
   cu: AngularFireList<any>;
@@ -34,8 +35,16 @@ export class AppComponent {
   }
 
   Add() {
+    console.log(this.i);
+    this.i++;
     this.cu = this.db.list('/Courses');
     this.cu.set(this.i.toString(), 'course' + this.i);
-    this.i++;
+
+  }
+  Del() {
+    console.log(this.i);
+    firebase.database().ref('/Courses/').child(this.i.toString()).remove();
+    this.i--;
+    console.log(this.i);
   }
 }

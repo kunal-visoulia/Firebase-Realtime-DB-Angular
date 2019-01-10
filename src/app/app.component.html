@@ -1,6 +1,14 @@
-<ul>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+  <ul>
   <li *ngFor="let item of course">
     {{item}}
   </li>
-</ul>
+</ul></div>
+<div class="col-sm-6">
+
 <button (click)="Add()">click to add data</button>
+
+<button (click)="Del()">click to delete data</button>
+</div></div></div>
