@@ -2,19 +2,20 @@ import { Component } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import * as firebase from 'firebase';
+import * as admin from 'firebase-admin';
 
-class Course {
-  $key: string;
-  $value: string;
+// class Course {
+//   $key: string;
+//   $value: string;
 
-}
+// }
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'firebase-CRUD';
+  title = 'firebase-Realtime-DB';
 
   // courses: Observable<any[]>;
   course: any;
@@ -26,6 +27,7 @@ export class AppComponent {
     });
     // console.log(this.courses);
     // }
+
 
   }
 }
