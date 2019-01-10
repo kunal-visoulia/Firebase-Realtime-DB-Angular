@@ -16,18 +16,26 @@ import * as admin from 'firebase-admin';
 })
 export class AppComponent {
   title = 'firebase-Realtime-DB';
-
+  i = 3;
   // courses: Observable<any[]>;
   course: any;
-  constructor(db: AngularFireDatabase) {
+  cu: AngularFireList<any>;
+  constructor(public db: AngularFireDatabase) {
     db.list('/Courses').valueChanges().subscribe(course => {
       this.course = course;
       console.log(this.course);
+
 
     });
     // console.log(this.courses);
     // }
 
 
+  }
+
+  Add() {
+    this.cu = this.db.list('/Courses');
+    this.cu.set(this.i.toString(), 'course' + this.i);
+    this.i++;
   }
 }
