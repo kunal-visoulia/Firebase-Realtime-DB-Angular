@@ -5,12 +5,19 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyCO_MAg9NZL3RchVCgQpVsD_q9LeRjlw6w',
-    authDomain: 'crud-app-bdd51.firebaseapp.com',
-    databaseURL: 'https://crud-app-bdd51.firebaseio.com',
-    projectId: 'crud-app-bdd51',
-    storageBucket: 'crud-app-bdd51.appspot.com',
-    messagingSenderId: '1070323685695'
+    // apiKey: 'AIzaSyCO_MAg9NZL3RchVCgQpVsD_q9LeRjlw6w',
+    // authDomain: 'crud-app-bdd51.firebaseapp.com',
+    // databaseURL: 'https://crud-app-bdd51.firebaseio.com',
+    // projectId: 'crud-app-bdd51',
+    // storageBucket: 'crud-app-bdd51.appspot.com',
+    // messagingSenderId: '1070323685695'
+    apiKey: "AIzaSyCO_MAg9NZL3RchVCgQpVsD_q9LeRjlw6w",
+    authDomain: "crud-app-bdd51.firebaseapp.com",
+    databaseURL: "https://crud-app-bdd51.firebaseio.com",
+    projectId: "crud-app-bdd51",
+    storageBucket: "crud-app-bdd51.appspot.com",
+    messagingSenderId: "1070323685695",
+    appId: "1:1070323685695:web:970b4965c869fd02"
   },
 };
 

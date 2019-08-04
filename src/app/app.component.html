@@ -4,6 +4,7 @@
   <ul>
   <li *ngFor="let item of course; let idx=index; " >
     {{item}}
+    <button (click)="update(idx)">update</button>
   </li>
 </ul></div>
 <div class="col-sm-6">

@@ -48,5 +48,9 @@ export class AppComponent {
     this.i--;
     console.log(this.i);
   }
+  update(idx){
+    this.cu = this.db.list('/Courses');
+    this.cu.set((++idx).toString(), 'course' + "pata");
+  }
 }
 
